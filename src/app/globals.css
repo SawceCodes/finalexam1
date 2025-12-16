@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* In Tailwind 4, you define your custom theme variables directly here.
+  These automatically generate utility classes like 'bg-gold', 'text-gold-light', etc.
+*/
+@theme {
+  /* --- The Gold Palette --- */
+  /* Standard Metallic Gold */
+  --color-gold: #D4AF37;       
+  /* Lighter/Brighter Gold for hover states */
+  --color-gold-light: #F4C430; 
+  /* Darker Gold for borders or active states */
+  --color-gold-dark: #AA8C2C;  
+
+  /* --- The Black Palette --- */
+  /* Pure Black (good for borders or stark contrast) */
+  --color-black: #000000;
+  /* Rich Black (slightly softer, better for main backgrounds to reduce eye strain) */
+  --color-black-rich: #0a0a0a; 
+  /* Charcoal Black (good for cards or secondary backgrounds) */
+  --color-black-card: #121212;
+
+  /* --- The White Palette --- */
+  --color-white: #ffffff;
+  /* Off-white for body text (reduces eye fatigue on dark backgrounds) */
+  --color-white-dim: #e5e5e5; 
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Apply the default dark theme styles to the base HTML elements.
+*/
+@layer base {
+  body {
+    background-color: var(--color-black-rich);
+    color: var(--color-white-dim);
+    /* Optional: Making text rendering smoother on dark backgrounds */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Example: Set headings to Pure White */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-white);
+    font-weight: 700;
+  }
+
+  /* Example: Links default to Gold */
+  a {
+    color: var(--color-gold);
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color: var(--color-gold-light);
+  }
 }

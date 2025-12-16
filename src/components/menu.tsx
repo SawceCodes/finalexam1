@@ -1,6 +1,6 @@
 "use client"
 
-import { Home, Settings, User, LogOut, FileText } from "lucide-react"
+import { Home, User, LogOut, FileText } from "lucide-react"
 import Link from "next/link"
 
 // Simple top navigation bar aligned with header content
@@ -15,7 +15,7 @@ export function Menu() {
         <span>Home</span>
       </Link>
       <Link
-        href="https://www.acct343szheng.com/"
+        href="https://exam-1-steven-zheng.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
         className={baseLink}
@@ -31,10 +31,6 @@ export function Menu() {
       >
         <User className="h-4 w-4" />
         <span>Git 1</span>
-      </Link>
-      <Link href="/settings" className={baseLink}>
-        <Settings className="h-4 w-4" />
-        <span>Settings</span>
       </Link>
       <div className="mx-2 h-6 w-px bg-gold-dark" />
       <Link href="/logout" className={baseLink}>

@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <header className="sticky top-0 z-50 w-full border-b border-gold-dark bg-black-card">
           <div className="container flex h-16 items-center justify-between px-4">
-            <h1 className="text-xl font-bold text-white">Payroll System</h1>
+            <h1 className="text-xl font-bold text-white">Hair Salon Business</h1>
             <Menu />
           </div>
         </header>

@@ -33,7 +33,12 @@ export default function RootLayout({
       >
         <header className="sticky top-0 z-50 w-full border-b border-gold-dark bg-black-card">
           <div className="container flex h-16 items-center justify-between px-4">
-            <h1 className="text-xl font-bold text-white">Hair Salon Business</h1>
+            <div className="flex items-baseline gap-3">
+              <h1 className="text-xl font-bold text-white">Hair Salon Business</h1>
+              <span className="text-sm font-semibold text-gold/80">
+                by Steven Zheng
+              </span>
+            </div>
             <Menu />
           </div>
         </header>

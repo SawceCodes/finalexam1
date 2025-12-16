@@ -373,7 +373,11 @@ export default function Home() {
                 <CardHeader>
                   <div className="flex gap-1 mb-2">
                     {[...Array(review.rating)].map((_, starIndex) => (
-                      <Star key={starIndex} className="h-4 w-4 fill-primary text-primary" />
+                      <Star
+                        key={starIndex}
+                        className="h-4 w-4 text-primary"
+                        fill="currentColor"
+                      />
                     ))}
                   </div>
                 </CardHeader>
